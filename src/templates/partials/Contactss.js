@@ -21,25 +21,27 @@ const Contactss = () => {
 
     const submitHandler = async(e) => {
         e.preventDefault()
+        alert("successFully Addded")
       console.log(inputBook)
         await axios.post("https://portfoliobackend-c73n.onrender.com/send", {
-            name: inputBook.name
+        // await axios.post("http://localhost:5000/send", {
+             name: inputBook.name
             , phone: inputBook.phone
             , message: inputBook.message,
             email: inputBook.email,
         }).then((res) => {
-
+            
             setInputBook({
                  name: ""
                 , phone: ""
                 , message: "",
                   email: "",
             })
-            alert("successFully Addded")
+           
         }).catch((err)=>{
             console.log(err)
         })
-
+        
     }
 
 
