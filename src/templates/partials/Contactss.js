@@ -22,7 +22,7 @@ const Contactss = () => {
     const submitHandler = async(e) => {
         e.preventDefault()
       console.log(inputBook)
-        await axios.post("http://localhost:5000/send", {
+        await axios.post("https://portfoliobackend-c73n.onrender.com", {
             name: inputBook.name
             , phone: inputBook.phone
             , message: inputBook.message,
